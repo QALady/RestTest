@@ -1,0 +1,64 @@
+<div class="modal-header">
+	<h3 class="modal-title">Update QA Info</h3>
+</div>
+<div class="modal-body">
+
+	<form class="form-horizontal" role="form" name="vm.updQaForm" novalidate>
+		<div class="form-group">
+			<label for="qaId" class="col-sm-3 control-label">Question ID</label>
+			<div class="col-sm-6">
+				<input type="text" name="qaId" class="form-control"
+					ng-model="vm.updForm.qaId" disabled/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="vm.updForm.question" class="col-sm-3 control-label">Question</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" name="question"
+					ng-model="vm.updForm.question" />
+			</div>
+		</div>
+		<div class="form-group"
+			ng-show="vm.updForm.showMessage && vm.updQaForm.question.$invalid">
+			<div class="col-sm-3"></div>
+			<div class="alert alert-danger col-sm-6">Question field cannot
+				left empty!</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="vm.updForm.type" class="col-sm-3 control-label">Type</label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" name="type"
+					ng-model="vm.updForm.type" />
+			</div>
+		</div>
+		<div class="form-group"
+			ng-show="vm.updForm.showMessage && vm.updQaForm.type.$invalid">
+			<div class="col-sm-3"></div>
+			<div class="alert alert-danger col-sm-6">Type field cannot
+				left empty!</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="vm.updForm.answer" class="col-sm-3 control-label">Answer</label>
+			<div class="col-sm-6">
+				<textarea class="form-control" name="answer"
+					ng-model="vm.updForm.answer" rows="6"></textarea>
+			</div>
+		</div>
+		<div class="form-group"
+			ng-show="vm.updForm.showMessage && vm.updQaForm.answer.$invalid">
+			<div class="col-sm-3"></div>
+			<div class="alert alert-danger col-sm-6">Answer field cannot
+				left empty!</div>
+		</div>
+		<div class="alert alert-success" role="alert" ng-show="vm.updForm.resultFlag">
+		  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+		  {{vm.updForm.message}}
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-click="vm.update($index)">Update</button>
+	<button class="btn btn-warning" type="button" ng-click="vm.updateCloseWindow()">Close</button>
+</div>

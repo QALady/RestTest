@@ -1,0 +1,18 @@
+<div class="modal-header">
+	<h3 class="modal-title">Delete QA Info</h3>
+</div>
+<div class="modal-body">
+	<div class="well well-lg">Do you really want to delete QA
+		information?</div>
+	<div class="alert alert-success" role="alert"
+		ng-show="vm.delete.resultFlag">
+		<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+		{{vm.delete.message}}
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button"
+		ng-click="vm.deleteQa($index)">Delete</button>
+	<button class="btn btn-warning" type="button"
+		ng-click="vm.deleteCloseWindow()">Close</button>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<script src="/RestTest/js/ext_lib/angular.min.js"></script>
+	<script src="/RestTest/js/ext_lib/ngStorage.js"></script>
+	<script src="/RestTest/js/ext_lib/ui-bootstrap-tpls-0.14.3.js"></script>
+	<link href="/RestTest/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/RestTest/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/RestTest/css/style.css" />
+	<script src="/RestTest/js/home/app.js"></script>
+	<script src="/RestTest/js/home/service.js"></script>
+	<script src="/RestTest/js/home/ctrl.js"></script>
+	<script src="/RestTest/js/home/directive.js"></script>
+	
+	</head>
+	
+	<body ng-app="myapp" ng-controller="RegCtrl as vm" ng-init="init()"
+		class="container theme1">
+		<page-header></page-header>
+		<br /> <br />
+		<qa-search-form></qa-search-form>
+		<Br /> 
+		<div ng-show="vm.resultFlag">
+			<qa-result></qa-result>
+		</div>
+		<page-footer></page-footer>
+	</body>
+</html>
