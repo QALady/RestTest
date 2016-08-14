@@ -1,0 +1,87 @@
+/* Styles go here */
+.theme1 {
+	background-color:rgba(181, 216, 143, 1);
+}
+
+.navbar-qa {
+	background-color: rgb(43,123,70);
+	border-color: rgba(231,231,231,1);
+}
+
+.cust-bg-info {
+	background-color: rgb(140, 216, 152);
+	color: rgb(255,255,255);
+}
+
+.navbar-qa .container-fluid {
+	margin-top: 8px;
+	color: rgb(255,255,255);
+}
+
+.theme1 .searchResult thead, .theme1 .searchResult thead tr, .theme1 .searchResult thead tr th{
+	background-color:rgb(0,0,0);
+	color:rgb(255,255,255);
+}
+
+.theme1 .updateLink {
+	cursor:pointer;
+	color:rgb(0,0,255);
+}
+
+.theme1 .deleteLink {
+	cursor:pointer;
+	color:rgb(255,0,0);
+}
+
+.theme1 .excelLink {
+	cursor: pointer;
+	color:rgb(0,210,0);
+	font-size:20px;
+}
+
+.theme1 .pdfLink {
+	cursor: pointer;
+	color:rgb(210,0,0);
+	font-size:20px;
+}
+
+.theme1 .wordLink {
+	cursor: pointer;
+	color:rgb(0,0,210);
+	font-size:20px;
+}
+
+.theme1 .imageLink {
+	cursor:pointer;
+	color:rgb(226, 45, 144);
+}
+
+.theme1 .answerCls {
+	width:500px;
+	white-space: pre-wrap;
+  	word-break: normal;
+}
+
+#slides_control > div{
+  height: 200px;
+}
+.slide img{
+  margin:auto;
+  width: auto;
+}
+#slides_control {
+  position:absolute;
+  width: 200px;
+  left:50%;
+  top:20px;
+  margin-left:-200px;
+}
+
+.custom-carousel {
+	bottom: 0px;
+	padding-bottom:0px;
+}
+
+.header-text {
+	padding-top: 5px;
+}

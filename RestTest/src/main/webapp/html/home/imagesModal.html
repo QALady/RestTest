@@ -1,0 +1,29 @@
+<div class="modal-header">
+	<h3 class="modal-title">Images</h3>
+</div>
+<div class="modal-body">
+	<div ng-show="vm.slides.length == 0" class="alert alert-warning">
+		No image attached!
+	</div>
+	<div id="Carousel" class="carousel slide">
+		<carousel> 
+			<slide ng-repeat="slide in vm.slides"> 
+				<img ng-src="/temp.dir/{{slide.imagePath}}" ng-mouseover="showDelBtnFlg=true" ng-mouseleave="showDelBtnFlg=false">
+				<div class="carousel-caption custom-carousel">
+					<button class="btn btn-danger" type="button" ng-show="showDelBtnFlg"
+						ng-mouseover="showDelBtnFlg=true" 
+					ng-click="vm.deleteImage(slide)">X</button>
+				</div>
+			</slide> 
+		</carousel>
+	</div>
+	
+	<div ng-show="vm.imgDelForm.resultFlag" class="alert alert-success">
+		{{vm.imgDelForm.message}}
+	</div>
+	
+</div>
+<div class="modal-footer">
+	<button class="btn btn-warning" type="button"
+		ng-click="vm.imageCloseWindow()">Close</button>
+</div>
