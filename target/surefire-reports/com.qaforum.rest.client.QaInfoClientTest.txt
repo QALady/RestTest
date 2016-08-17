@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.qaforum.rest.client.QaInfoClientTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.02 sec

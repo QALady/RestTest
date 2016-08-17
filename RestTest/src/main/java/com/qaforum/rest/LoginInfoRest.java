@@ -123,12 +123,12 @@ public final class LoginInfoRest {
 		try {
 			if (LOGIN_DP.isAuthenticatedUser(loginDto)) {
 				final String sessionId = request.getSession(true).getId();
-				LoginInfoDTO userData = LOGIN_DP.getLoginInfo(loginDto
+				final LoginInfoDTO userData = LOGIN_DP.getLoginInfo(loginDto
 						.getLoginId());
 				userData.setSessionId(sessionId);
 				userData.setIsLogin(Boolean.TRUE);
 
-				userData = LOGIN_DP.save(userData);
+				LOGIN_DP.updateSessionId(userData.getLoginId(), sessionId);
 
 				response.setType(MessageConstants.SUCCESS);
 				response.setDescription(MessageConstants.LOGIN_AUTH_S_MSG);
