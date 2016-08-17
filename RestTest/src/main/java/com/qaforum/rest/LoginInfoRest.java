@@ -161,7 +161,7 @@ public final class LoginInfoRest {
 			final LoginInfoDTO loginDto = LOGIN_DP.getLoginInfo(logoutDTO
 					.getLoginId());
 			loginDto.setIsLogin(Boolean.FALSE);
-			LOGIN_DP.save(loginDto);
+			// LOGIN_DP.save(loginDto);
 			request.getSession().invalidate();
 			response.setType(MessageConstants.SUCCESS);
 		} catch (final Exception ex) {
