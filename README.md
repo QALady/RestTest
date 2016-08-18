@@ -73,6 +73,14 @@
     </p>
   </li>
   <li>
+    <b>Dependency</b>
+    <p>
+      <ul>
+        <li>Download dependent project QAForumHibernate</li>
+      </ul>
+    </p>
+  </li>
+  <li>
     <b>Snapshots</b>
     <br />
     <p>
