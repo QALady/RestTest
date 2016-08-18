@@ -23,7 +23,7 @@
         <li>
           Add/uncomment below property in hibernate.cfg.xml file:
           <ul>
-            <li><property name="hbm2ddl.auto">create</property></li>
+            <li>&lt;property name="hbm2ddl.auto"&gt;create&lt;/property&gt;</li>
           </ul>
         </li>
         <li>Change the connection.url, username, password if needed</li>
