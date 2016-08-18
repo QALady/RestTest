@@ -71,4 +71,25 @@
         <li>Export QAs to excel sheet</li>
       </ul>
     </p>
+  </li>
+  <li>
+    <b>Snapshots</b>
+    <br />
+    <p>
+      <img src="ProjectSnapshots/login_form.png" />
+      <br />
+      <img src="ProjectSnapshots/home_page.png" />
+      <br />
+      <img src="ProjectSnapshots/Search_Result.png" />
+      <br />
+      <img src="ProjectSnapshots/add_question.png" />
+      <br />
+      <img src="ProjectSnapshots/update_qa_info.png" />
+      <br />
+      <img src="ProjectSnapshots/delete_qa_info.png" />
+      <br />
+      <img src="ProjectSnapshots/image_pop_up.png" />
+      <br />
+    </p>
+  </li>
 </ol>
