@@ -29,6 +29,20 @@ myApp.directive('pageFooter', function() {
 	  };
 	});
 
+myApp.directive('paging', function() {
+	  return {
+	    templateUrl: '/RestTest/html/home/paging.html',
+	    restrict: 'E'
+	  };
+	});
+
+myApp.directive('leftMenu', function() {
+	  return {
+	    templateUrl: '/RestTest/html/home/leftMenu.html',
+	    restrict: 'E'
+	  };
+	});
+
 myApp.directive('fileModel', ['$parse', function ($parse) {
     return {
        restrict: 'A',

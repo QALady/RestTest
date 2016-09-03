@@ -192,21 +192,24 @@ public final class QaInfoRest {
 	@GET
 	@Path("qaList")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Message findAll() {
+	public Response findAll() {
 		List<QaInfoDTO> qaInfos = null;
 		final Message message = new Message();
+		Response response;
 		try {
 			qaInfos = QA_DP.findAll();
 			message.setType(SUCCESS);
 			message.setDescription(QA_GET_S_MSG);
 			message.addQaInfos(qaInfos);
+			response = Response.ok().entity(message).build();
 		} catch (final Exception ex) {
 			ex.printStackTrace();
 			message.setType(ERROR);
 			message.setDescription(QA_GET_E_MSG);
 			logger.log(Level.SEVERE, ex.getMessage(), ex);
+			response = Response.serverError().entity(message).build();
 		}
-		return message;
+		return response;
 	}
 
 	/**

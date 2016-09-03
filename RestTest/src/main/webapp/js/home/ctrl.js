@@ -1,22 +1,11 @@
 (function() {
 	var myApp = angular.module('myapp');
 
-	myApp.filter('startFrom', function() {
-	    return function(input, start) {
-	        start = +start; // parse to int
-	        if(typeof input == 'undefined') {
-	        	return 0;
-	        }
-	        return input.slice(start);
-	    };
-	});
-
-	
 	myApp.controller('RegCtrl', ['$scope', 'qaService', '$uibModal', '$localStorage', '$window', 
 	                             function($scope, qaService, $uibModal, $localStorage, $window) {
 		var vm = this;
 		vm.resultFlag = false;
-		vm.currentPage = 0;
+		vm.currentPage = 1;
 	    vm.pageSize = 6;
 	    vm.searchOptionA = [{key: 'questionId', value:'Question #'},{key:'question', value:'Question'},
 	                        {key:'answer', value:'Answer'}, {key:'type', value:'Type'}];
@@ -37,7 +26,8 @@
 	    		vm.readTitle = "Read More";
 	    	}
 	    };
-
+	    
+	    vm.showLeftMenuFlag = false;
 	    
 	    $scope.init = function() {
 			if($window.localStorage.getItem('loginId') == null || 
@@ -63,7 +53,18 @@
 	    		return 0;
 	    	}
 	        return Math.ceil(vm.qaInfos.length/vm.pageSize);                
-	    }
+	    };
+	    
+	    vm.isValidPageIndex = function(pageNum) {
+	    	if(pageNum > vm.numberOfPages()) {
+	    		vm.pageIndexErrorMsg = "Page number must be between 1 and "+vm.numberOfPages()+"!";
+//	    		$(this).tooltip('show');
+	    	} else {
+	    		vm.pageIndexErrorMsg = "";
+//	    		$(this).tooltip('hide');
+	    	}
+	    };
+	    
 		// add submit event
 		vm.submit = function() {
 			vm.searchShowMessage= false;

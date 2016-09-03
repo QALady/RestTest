@@ -6,6 +6,11 @@
 .navbar-qa {
 	background-color: rgb(43,123,70);
 	border-color: rgba(231,231,231,1);
+	height: 40px;
+}
+
+.qa-header {
+	display: inline-block;
 }
 
 .cust-bg-info {
@@ -84,4 +89,140 @@
 
 .header-text {
 	padding-top: 5px;
+}
+
+.sm-txt {
+	width: 50px !important;
+}
+
+.menu-bar {
+	padding-top:7px;
+}
+
+.error-txt {
+	background-color: rgb(230, 20, 20);
+	color: rgb(255,255,255);
+}
+
+div.ng-isolate-scope {
+	width: 300px;
+	background-color: rgb(230, 20, 20);
+	color: rgb(255, 255, 255);
+}
+
+div.ng-isolate-scope .arrow:after {
+	border-top-color: rgb(230, 20, 20) !important;
+}
+
+.left-menu {
+	margin-top: 30px;
+	padding-top: 30px;
+	display: none !important;
+	position: relative;
+	background-color: #333;
+	color: #ccc;
+	padding-left: 0px;
+	width: 200px;
+	min-height: 100vh;
+}
+
+.left-menu ul li:hover {
+	color: #ccc;
+	background-color: #555;
+}
+
+.left-menu ul {
+	list-style-type: none;
+	vertical-align: top;
+	padding-left: 0px;
+}
+
+.left-menu ul li {
+	line-height: 3em;
+	cursor: pointer;
+}
+
+.left-menu ul li div {
+	display: inline-block;
+	width: 90%;
+	padding-left: 16px;
+	
+}
+
+.no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.top-menu {
+	background-color: #333;
+	color: #ccc;
+}
+
+.top-menu ul li:hover {
+	color: #ccc;
+	background-color: #555;
+}
+
+.top-menu ul {
+	list-style-type: none;
+	vertical-align: top;
+	padding-left: 0px;
+}
+
+.top-menu ul li {
+	line-height: 3em;
+	cursor: pointer;
+	padding-right: 15px;
+}
+
+.top-menu ul li div {
+	display: inline-block;
+	width: 100%;
+	padding-left: 16px;
+	
+}
+
+.top-menu ul li div i {
+	padding-right: 10px;
+}
+
+.menu-row {
+	padding:0px;
+	margin:0px;
+	background-color: rgb(43,123,70);
+}
+
+.menu-link {
+	display: none !important;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+	.left-menu, .menu-link {
+		display: inline !important;
+	}
+	
+	.top-menu {
+		display: none !important;
+	}
+}
+
+@keyframes myChange {
+  from {
+      width: 200px;
+  } to {
+      width: 0;
+  }
+}
+
+div.left-menu {
+  width: 200px;
+}
+
+div.left-menu div.ng-hide {
+  animation: 0.7s myChange;
 }
