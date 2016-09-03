@@ -29,6 +29,10 @@
 	    
 	    vm.showLeftMenuFlag = false;
 	    
+	    $scope.$watch('vm.currentPage',function(val,old){
+	    	vm.currentPage = parseInt(val); 
+	    });
+	    
 	    $scope.init = function() {
 			if($window.localStorage.getItem('loginId') == null || 
 					$window.localStorage.getItem('sessionId') == null) {
@@ -89,7 +93,7 @@
 				
 				if(vm.searchFm.$valid) {
 					qaService.getQaInfo(vm.searchForm).then(function(response) {
-						vm.currentPage = 0;
+						vm.currentPage = 1;
 						vm.qaInfos = response.qaInfos;
 						vm.resultFlag = true;
 					});

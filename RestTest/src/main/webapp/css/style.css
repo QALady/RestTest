@@ -104,9 +104,10 @@
 	color: rgb(255,255,255);
 }
 
-div.ng-isolate-scope {
+div.ng-isolate-scope .popover-inner{
 	width: 300px;
 	background-color: rgb(230, 20, 20);
+	border-color: rgb(230, 20, 20);
 	color: rgb(255, 255, 255);
 }
 

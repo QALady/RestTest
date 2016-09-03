@@ -1,14 +1,14 @@
-<div class="btn-group" role="group">
-	<button class="btn btn-primary" ng-disabled="vm.currentPage == 1"
-		ng-click="vm.currentPage=1">&lt;&lt;</button>
-	<button class="btn btn-primary" ng-disabled="vm.currentPage == 1"
-		ng-click="vm.currentPage=vm.currentPage - 1">&lt;</button>
+<div class="btn-group" data-role="group">
+	<button class="btn btn-primary" data-ng-disabled="vm.currentPage == 1"
+		data-ng-click="vm.currentPage=1">&lt;&lt;</button>
+	<button class="btn btn-primary" data-ng-disabled="vm.currentPage == 1"
+		data-ng-click="vm.currentPage=vm.currentPage - 1">&lt;</button>
 	<div class="input-group">
-		<input type="text" ng-model="vm.currentPage"
-			class="form-control sm-txt" ng-class="{'error-txt': vm.currentPage > ((vm.qaInfos.length/vm.pageSize) | ceil)}"
-			ng-change="vm.isValidPageIndex(vm.currentPage)"
-			popover-placement="top" popover="{{vm.pageIndexErrorMsg}}"
-			popover-trigger="mouseover"/>
+		<input type="text" data-ng-model="vm.currentPage"
+			class="form-control sm-txt" data-ng-class="{'error-txt': vm.currentPage > ((vm.qaInfos.length/vm.pageSize) | ceil)}"
+			data-ng-change="vm.isValidPageIndex(vm.currentPage)"
+			data-popover-placement="top" data-popover="{{vm.pageIndexErrorMsg}}"
+			data-popover-trigger="mouseover"/>
 	</div>
 	<button class="btn btn-primary">
 		<!-- {{vm.currentPage+1 | number :
@@ -16,9 +16,9 @@
 		/{{vm.numberOfPages()}}
 	</button>
 	<button class="btn btn-primary"
-		ng-disabled="vm.currentPage >= ((vm.qaInfos.length/vm.pageSize) | ceil)"
-		ng-click="vm.currentPage=vm.currentPage+1">&gt;</button>
+		data-ng-disabled="vm.currentPage >= ((vm.qaInfos.length/vm.pageSize) | ceil)"
+		data-ng-click="vm.currentPage=vm.currentPage + 1">&gt;</button>
 	<button class="btn btn-primary"
-		ng-disabled="vm.currentPage >= ((vm.qaInfos.length/vm.pageSize) | ceil)"
-		ng-click="vm.currentPage=vm.numberOfPages()">&gt;&gt;</button>
+		data-ng-disabled="vm.currentPage >= ((vm.qaInfos.length/vm.pageSize) | ceil)"
+		data-ng-click="vm.currentPage=vm.numberOfPages()">&gt;&gt;</button>
 </div>
