@@ -28,7 +28,9 @@
 	<context-param>
 	    <description>Store static contents</description>
 	    <param-name>temp.dir</param-name>
-	    <param-value>G:\jboss-as-7.1.1.Final\welcome-content\temp.dir\</param-value>
+	    <!-- Uncomment below for JBoss -->
+	    <!-- <param-value>G:\jboss-as-7.1.1.Final\welcome-content\temp.dir\</param-value> -->
+	    <param-value>G:\apache-tomcat-7.0.53\webapps\temp.dir\</param-value>
 	</context-param>
 	<welcome-file-list>
 	    <welcome-file>/html/login/index.html</welcome-file>
