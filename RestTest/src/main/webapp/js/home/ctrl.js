@@ -126,7 +126,7 @@
 		
 		// Add show update window event
 		vm.showUpdateWindow = function(index) {
-			var itemIndex = vm.pageSize*vm.currentPage+index;
+			var itemIndex = vm.pageSize*(vm.currentPage - 1) + index;
 			$uibModal.open({
 				templateUrl : '/RestTest/html/home/updateModal.html',
 				size : 'lg',
